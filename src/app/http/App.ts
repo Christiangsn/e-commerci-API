@@ -1,6 +1,6 @@
 import express, { Application } from 'express'
 import cors from 'cors'
-import { bodyParser } from '@app/middlewares/bodyParser'
+import { bodyParser } from '@app/middlewares/BodyParser'
 
 class App {
     public app: Application
