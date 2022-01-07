@@ -23,3 +23,11 @@ export interface IAddProductModelProtocol {
 export interface IAddProductProtocol {
     execute (product : IAddProductModelProtocol): Promise<void>
 }
+
+export interface IListProductProtocol {
+    execute (): Promise<IProductEntityProtocol[]>
+}
+
+export interface IShowProductProtocol {
+    execute ({ id }: IProductModelSearchProtocol): Promise<IProductEntityProtocol>
+}

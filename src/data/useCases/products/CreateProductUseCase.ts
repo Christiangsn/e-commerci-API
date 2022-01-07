@@ -4,7 +4,7 @@ import { IAddProductModelProtocol, IAddProductProtocol } from '@domain/protocols
 import { ProductsRepository } from '@infra/typeorm/repositories/ProductsRepository'
 import { AppError } from '@presentation/errors/AppError'
 
-export class CreateProductService implements IAddProductProtocol {
+export class CreateProduct implements IAddProductProtocol {
   public async execute ({ name, price, quantity }: IAddProductModelProtocol): Promise<void> {
     const productsRepository = getCustomRepository(ProductsRepository)
 
