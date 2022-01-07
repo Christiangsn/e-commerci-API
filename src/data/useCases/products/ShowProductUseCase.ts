@@ -5,10 +5,10 @@ import { ProductsRepository } from '@infra/typeorm/repositories/ProductsReposito
 import { AppError } from '@presentation/errors/AppError'
 
 export class ShowProduct implements IShowProductProtocol {
-  public async execute ({ id }: IProductModelSearchProtocol): Promise<IProductEntityProtocol | undefined> {
+  public async execute ({ id }: IProductModelSearchProtocol): Promise<IProductEntityProtocol> {
     const productsRepository = getCustomRepository(ProductsRepository)
 
-    const product = productsRepository.findOne(id)
+    const product = await productsRepository.findOne(id)
     if (!product) {
       throw new AppError('Product not found', 404)
     }

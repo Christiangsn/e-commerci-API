@@ -6,7 +6,7 @@ import { ProductsRepository } from '@infra/typeorm/repositories/ProductsReposito
 export class ListProduct implements IListProductProtocol {
   public async execute (): Promise<IProductEntityProtocol[]> {
     const productsRepository = getCustomRepository(ProductsRepository)
-    const products = productsRepository.find()
+    const products = await productsRepository.find()
     return products
   }
 }

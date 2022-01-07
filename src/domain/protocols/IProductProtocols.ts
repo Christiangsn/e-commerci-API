@@ -20,6 +20,13 @@ export interface IAddProductModelProtocol {
     quantity: number
 }
 
+export interface IUpdatedProductModelProtocol {
+    id?: string
+    name: string
+    price: number
+    quantity: number
+}
+
 export interface IAddProductProtocol {
     execute (product : IAddProductModelProtocol): Promise<void>
 }
@@ -30,4 +37,8 @@ export interface IListProductProtocol {
 
 export interface IShowProductProtocol {
     execute ({ id }: IProductModelSearchProtocol): Promise<IProductEntityProtocol | undefined>
+}
+
+export interface IUpdatedProductProtocol {
+    execute (productUpdated : IUpdatedProductModelProtocol): Promise<void>
 }
