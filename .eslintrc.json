@@ -19,6 +19,7 @@
         "@typescript-eslint/no-useless-constructor": ["error"],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "no-console": "warn"
+        "no-console": "warn",
+        "camelcase": "off"
     }
 }

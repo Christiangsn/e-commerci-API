@@ -6,6 +6,7 @@ temp/
 .env
 coverages/ormconfig.json
 dist/
+yarn-error.log
 
 uploads/*
 !uploads/.gitkeep
