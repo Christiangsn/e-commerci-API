@@ -1,5 +1,7 @@
+import 'reflect-metadata'
 import express, { Application } from 'express'
 import cors from 'cors'
+
 import { bodyParser } from '@app/middlewares/BodyParser'
 
 class App {
