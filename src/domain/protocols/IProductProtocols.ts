@@ -29,5 +29,5 @@ export interface IListProductProtocol {
 }
 
 export interface IShowProductProtocol {
-    execute ({ id }: IProductModelSearchProtocol): Promise<IProductEntityProtocol>
+    execute ({ id }: IProductModelSearchProtocol): Promise<IProductEntityProtocol | undefined>
 }
