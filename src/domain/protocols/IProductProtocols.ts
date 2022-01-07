@@ -13,3 +13,13 @@ export interface IProductModelSearchProtocol {
     price?: number
     quantity?: number
 }
+
+export interface IAddProductModelProtocol {
+    name: string
+    price: number
+    quantity: number
+}
+
+export interface IAddProductProtocol {
+    execute (product : IAddProductModelProtocol): Promise<void>
+}
